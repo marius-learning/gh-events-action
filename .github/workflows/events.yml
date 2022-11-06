@@ -7,11 +7,6 @@ on:
       - closed
       - reopened
   workflow_dispatch:
-  push:
-    branches:
-      - main
-    paths:
-      - scr/App.jsx
 
 jobs:
   deploy:
