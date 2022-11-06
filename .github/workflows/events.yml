@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Output Event
-        run: echo "${{ toJSON(github.event) }}"
+        run: echo "${{ toJSON(github) }}"
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
