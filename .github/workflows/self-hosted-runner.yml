@@ -1,0 +1,19 @@
+name: Self Hosted Runner
+
+on:
+  workflow_dispatch:
+
+jobs:
+  main:
+    runs-on: [self-hosted, ubuntu]
+    steps:
+      - uses: actions/checkout@v3
+      - run: ls -R .
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: node -v
+      - run: npm ci
+      - run: npm run test
+      - run: npm run build
+      - run: ls -R dist

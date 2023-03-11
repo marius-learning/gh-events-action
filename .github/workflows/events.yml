@@ -1,17 +1,17 @@
 name: Events
 on:
-  pull_request:
-    types:
-      - opened
-      - edited
-      - closed
-      - reopened
+  # pull_request:
+  #   types:
+  #     - opened
+  #     - edited
+  #     - closed
+  #     - reopened
   workflow_dispatch:
-  push:
-    branches:
-      - main
-    paths:
-      - src/App.jsx
+  # push:
+  #   branches:
+  #     - main
+  #   paths:
+  #     - src/App.jsx
 
 jobs:
   deploy:
